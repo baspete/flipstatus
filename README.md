@@ -39,4 +39,4 @@ The characters are generated using CSS sprites in `img/`. If you change these, b
 LICENSE
 =======
 
-This project is copyright 2012 by BAS Design Inc., and is released under the [MIT Licesnse](LICENSE.txt).
+This project is copyright 2012 by BAS Design Inc., and is released under the [MIT License](LICENSE.txt).
