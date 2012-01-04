@@ -31,6 +31,7 @@ a {
   margin-bottom: 20px;
 }
 .splitflap .row {
+  width: 2000px; /* something wide so it doesn't wrap*/
   clear: both;
   height: 60px;
 }
