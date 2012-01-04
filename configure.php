@@ -30,6 +30,7 @@
         <div class="pull-right">
         <ul class="nav">
           <li><a href="#about" data-controls-modal="about">About</a></li>
+          <li><a href="mailto:pbutler@basdesign.com" >Contact</a></li>
         </ul>
         </div>
       </div>
@@ -44,8 +45,15 @@
         <div class="row">
           <div class="span3"><h1>Source</h1></div>
           <div class="span5">
-            <h3><img src="img/twitter.png" class="sourceLogo"/>Twitter</h3>
+            <h3><img src="img/logos/twitter.png" class="sourceLogo"/>Twitter</h3>
             <p>Enter as many usernames, hashtags and/or words as you'd like, separated by spaces. Flipstatus will search Twitter and return the most recent results.</p>
+            <h5>Coming Soon:</h5>
+            <img src="img/logos/rss.png" class="sourceLogo" alt="rss"/>
+            <img src="img/logos/sms.png" class="sourceLogo" alt="sms"/>
+            <img src="img/logos/facebook.png" class="sourceLogo" alt="facebook"/>
+            <img src="img/logos/yelp.png" class="sourceLogo" alt="yelp"/>
+            <img src="img/logos/foursquare.png" class="sourceLogo" alt="foursquare"/>
+            <img src="img/logos/mail.png" class="sourceLogo" alt="mail"/>
           </div>
           <div class="span8">
             <fieldset>
@@ -161,9 +169,13 @@
       <h3>What Is This Anyway?</h3>
     </div>
     <div class="modal-body">
-      <p>Flipstatus is a project from <a href="http://pete.basdesign.com" target="_blank">BAS Design Labs</a>. The idea is to use a simulated <a href="http://en.wikipedia.org/wiki/Split-flap_display" target="_blank">split-flap display</a> to keep track of feeds from around the web. At the moment, it's just Twitter, but soon we'll be adding Facebooks, foursquare and Yelp, as well as the ability to pick up RSS feeds.</p>
-      <p>This is an open-source project. If you've got some ideas about how to make it better, feel free to check out the source code over at <a href="https://github.com/sweetmidget/flipstatus" target="_blank">https://github.com/sweetmidget/flipstatus</a>.</p>
-      <p>If you've got questions or feedback, we'd love to hear from you. Contact me at pbutler&nbsp;at&nbsp;basdesign&nbsp;dot&nbsp;com.</p>
+      <p>Flipstatus is a project from <a href="http://pete.basdesign.com" target="_blank">BAS Design Labs</a>. The idea is to use a simulated <a href="http://en.wikipedia.org/wiki/Split-flap_display" target="_blank">split-flap display</a> to keep track of feeds from around the web. At the moment, it's just Twitter, but soon we'll be adding Facebook, foursquare and Yelp, as well as the ability to pick up RSS feeds, email and SMS messages.</p>
+      <p><img src="img/screen_thumb.png" style="float:right;" />This is an open-source project, released under the <a href="LICENSE.txt" target="_blank">MIT License</a>. If you'd like to help make it better, feel free to check out the source code at</p>
+      <p><a href="https://github.com/sweetmidget/flipstatus" target="_blank">https://github.com/sweetmidget/flipstatus</a></p>
+      <p>Other examples of what can be done can be found in our split-flap project at</p>
+      <p><a href="https://github.com/sweetmidget/Split-Flap" target="_blank">https://github.com/sweetmidget/Split-Flap</a></p>
+      <p>And you can see working examples of those at <a href="http://dev.basdesign.com/split-flap/" target="_blank">http://dev.basdesign.com/split-flap/</a>.</p>
+      <p>If you've got questions or feedback, or you end up building something cool with this we'd love to hear from you. Contact us at pbutler&nbsp;at&nbsp;basdesign&nbsp;dot&nbsp;com.</p>
 
 
     </div>

@@ -24,7 +24,7 @@ which is appended to the tweetboard.php URL
       </div>
     </div>    
     <div class="subhead">
-      <div class="container">
+      <div class="container" style="padding:10px 0;">
         TV and laptop sizes available
       </div>
     </div>
