@@ -55,7 +55,7 @@ sf.util = {
     return vars;
   },
   getUrlParam: function(name){
-    return $.getUrlParams()[name];
+    return sf.util.getUrlParams()[name];
   }
 
 };

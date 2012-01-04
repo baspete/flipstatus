@@ -7,29 +7,30 @@ sf.plugins.twitter = {
   url: function(options){
     var base_url = "http://search.twitter.com/search.json";
     // pick up the query from the page URL
-    var searchString = window.location.search;
+    var searchString = sf.util.getUrlParam("q");
     // optionally limit results
     var maxResults = options.maxResults ? options.maxResults : options.numRows;
-    return base_url + searchString + "&rpp=" + maxResults;
+    return base_url + "?q=" + searchString + "&rpp=" + maxResults;
   },
 
   formatData: function(response){
     var newResponse = [];
     for(var i=0;i<response.results.length;i++){
       // console.log("Tweet Data:",response.results[i]);
+      // 
 
       // Get the author
       var from_user = response.results[i].from_user;
 
-      // Get the timestamp
-      var today = new Date().getDate();
+      // Set the status based on the age
+      var status = "1";
+      var now = new Date();
       var created = new Date(response.results[i].created_at);
-
-      // status to 1 if created today
-      var status = "0";
-      if(today - created.getDate() > 0){
-        status = "1";
+      var age = Math.round((now - created)/(1000 * 60)); // minutes
+      if(age < 60){
+        status = "0";
       }
+      console.log(age < 60)
 
       // set hours and minutes
       var hrs = created.getHours();
@@ -45,7 +46,7 @@ sf.plugins.twitter = {
       // Split the tweet text into rows and add each row to newResponse[] 
       // with a timestamp only on the first one
       var text = response.results[i].from_user+": "+response.results[i].text;
-      var rows = sf.util.splitString(text, 50); // 50 chars for HD display
+      var rows = sf.util.splitString(text, sf.options.numChars);
       for(var j=0;j<rows.length;j++){
         var row = {
           "timestamp":timestamp,
