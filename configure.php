@@ -61,6 +61,9 @@
               <span class="help-block">
                 Example: "@baspete #flipstatus statusboard"
               </span>
+              <br/>
+              <input type="checkbox" name="noMention" />
+              <span>Don't include mentions</span>
             </fieldset>
           </div>
         </div>
@@ -200,7 +203,11 @@
           var text = tWords[i];
           if(text.charAt(0) === "@"){
             text = text.substr(1);
-            queryStr += sep + "from:"+text+" OR to:"+text+" OR @"+text;
+            queryStr += sep + "from:"+text+" OR to:"+text;
+            // pick up the "mentions" checkbox
+            if($("input[name=noMention]:checked").length === 0){
+              queryStr += " OR @"+text;
+            }
           } else {
             queryStr += sep + text;
           }
