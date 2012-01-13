@@ -180,13 +180,13 @@ sf.display = {
   // a character and when prepended by "c" gives the class name which will
   // be applied to display that character.
   FullDrum: function() {
-    this.order = [' ','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','.',',','?','!','/','\'','+','-',':','@','#'];
+    this.order = [' ','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','.',',',':',';','?','!','\'','"','+','-','*','/','=','_','@','#','$','%','&'];
   },
   CharDrum: function() {
     this.order = [' ','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','.',','];
   },
   NumDrum: function() {
-    this.order = [' ','0','1','2','3','4','5','6','7','8','9','.',','];
+    this.order = [' ','0','1','2','3','4','5','6','7','8','9','.',',','$','%'];
   },
   ImageDrum: function() { 
     this.order = []; // Intentionally empty here. Override in plugins/<plugin_name>/custom.js
@@ -323,15 +323,23 @@ sf.display = {
       case " ": c = "csp";  break;
       case ".": c = "cper"; break;
       case ",": c = "ccom"; break;
+      case ":": c = "ccol"; break;
+      case ";": c = "csem"; break;
       case "?": c = "cque"; break;
       case "!": c = "cexc"; break;
-      case "/": c = "csla"; break;
       case "'": c = "capo"; break;
+      case '"': c = "cquo"; break;
       case "+": c = "cplu"; break;
       case "-": c = "cmin"; break;
-      case ":": c = "ccol"; break;
+      case "*": c = "cstr"; break;
+      case "/": c = "csla"; break;
+      case "=": c = "ceq";  break;
+      case "_": c = "cund"; break;
       case "@": c = "cat";  break;
       case "#": c = "chsh"; break;
+      case "$": c = "cdol"; break;
+      case "%": c = "cpct"; break;
+      case "&": c = "camp"; break;
     }
     container.fadeOut(50, function(){
       container.removeClass().addClass(c);

@@ -72,7 +72,7 @@ a {
   margin-right: 5px;
   width: 25px;
   height: 40px;
-  background: url('../img/split-flap-letters-yellow-sm.png') no-repeat;
+  background: url('../img/full_arial_yellow_40_hightlight.png') no-repeat;
   background-position: 0px 0px;
 }
   .splitflap .full span,
@@ -81,7 +81,7 @@ a {
     width: 25px;
     height: 40px;
     display: block;
-    background: url('../img/split-flap-letters-yellow-sm.png') no-repeat;
+    background: url('../img/full_arial_yellow_40_hightlight.png') no-repeat;
     background-position: -25px 0px; /* start with a space */
   }
 
@@ -128,15 +128,23 @@ a {
 .splitflap .full span.c9 { background-position: -925px 0px; } /* 9 */
 .splitflap .full span.cper { background-position: -950px 0px; } /* . */
 .splitflap .full span.ccom { background-position: -975px 0px; } /* , */
-.splitflap .full span.cque { background-position: -1000px 0px; } /* ? */
-.splitflap .full span.cexc { background-position: -1025px 0px; } /* ! */
-.splitflap .full span.csla { background-position: -1050px 0px; } /* / */
-.splitflap .full span.capo { background-position: -1075px 0px; } /* ' */
-.splitflap .full span.cplu { background-position: -1100px 0px; } /* + */
-.splitflap .full span.cmin { background-position: -1125px 0px; } /* - */
-.splitflap .full span.ccol  { background-position: -1150px 0px; } /* : */
-.splitflap .full span.cat  { background-position: -1175px 0px; } /* @ */
-.splitflap .full span.chsh  { background-position: -1200px 0px; } /* # */
+.splitflap .full span.ccol { background-position: -1000px 0px; } /* : */
+.splitflap .full span.csem { background-position: -1025px 0px; } /* ; */
+.splitflap .full span.cque { background-position: -1050px 0px; } /* ? */
+.splitflap .full span.cexc { background-position: -1075px 0px; } /* ! */
+.splitflap .full span.capo { background-position: -1100px 0px; } /* ' */
+.splitflap .full span.cquo { background-position: -1125px 0px; } /* " */
+.splitflap .full span.cplu  { background-position: -1150px 0px; } /* + */
+.splitflap .full span.cmin  { background-position: -1175px 0px; } /* - */
+.splitflap .full span.cstr  { background-position: -1200px 0px; } /* * */
+.splitflap .full span.csla  { background-position: -1225px 0px; } /* / */
+.splitflap .full span.ceq  { background-position: -1250px 0px; } /* = */
+.splitflap .full span.cund  { background-position: -1275px 0px; } /* _ */
+.splitflap .full span.cat  { background-position: -1300px 0px; } /* @ */
+.splitflap .full span.chsh  { background-position: -1325px 0px; } /* # */
+.splitflap .full span.cdol  { background-position: -1350px 0px; } /* $ */
+.splitflap .full span.cpct  { background-position: -1375px 0px; } /* % */
+.splitflap .full span.camp  { background-position: -1400px 0px; } /* & */
 /* NUMBERS ONLY DRUM */
 .splitflap .number span.csp { background-position: -25px 0px; } /* space */
 .splitflap .number span.c0 { background-position: -700px 0px; } /* 0 */
@@ -151,6 +159,8 @@ a {
 .splitflap .number span.c9 { background-position: -925px 0px; } /* 9 */
 .splitflap .number span.cper { background-position: -950px 0px; } /* . */
 .splitflap .number span.ccom { background-position: -975px 0px; } /* , */
+.splitflap .number span.cdol  { background-position: -1350px 0px; } /* $ */
+.splitflap .number span.cpct  { background-position: -1375px 0px; } /* % */
 /* CHARACTERS ONLY DRUM */
 .splitflap .character span.csp { background-position: -25px 0px; } /* space */
 .splitflap .character span.cA { background-position: -50px 0px; } /* A */
