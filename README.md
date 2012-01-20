@@ -7,6 +7,7 @@ This software creates a virtual split-flap display (often called a Solari board)
 
 * **Customizable look** Each line in the display is generated from a customizable backbone.js template.
 
+
 USAGE
 -----
 
