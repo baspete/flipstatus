@@ -42,18 +42,12 @@
     <form>
 
       <section id="source">
+        <!-- twitter -->
         <div class="row">
           <div class="span3"><h1>Source</h1></div>
           <div class="span5">
             <h3><img src="img/logos/twitter.png" class="sourceLogo"/>Twitter</h3>
             <p>Enter as many usernames, hashtags and/or words as you'd like, separated by spaces. Flipstatus will search Twitter and return the most recent results.</p>
-            <h5>Coming Soon:</h5>
-            <img src="img/logos/rss.png" class="sourceLogo" alt="rss"/>
-            <img src="img/logos/sms.png" class="sourceLogo" alt="sms"/>
-            <img src="img/logos/facebook.png" class="sourceLogo" alt="facebook"/>
-            <img src="img/logos/yelp.png" class="sourceLogo" alt="yelp"/>
-            <img src="img/logos/foursquare.png" class="sourceLogo" alt="foursquare"/>
-            <img src="img/logos/mail.png" class="sourceLogo" alt="mail"/>
           </div>
           <div class="span8">
             <fieldset>
@@ -65,6 +59,37 @@
               <input type="checkbox" name="noMention" />
               <span>Don't include mentions</span>
             </fieldset>
+          </div>
+        </div>
+        <!-- rss -->
+        <div class="row">
+          <div class="span3">&nbsp;</div>
+          <div class="span5">
+            <h3><img src="img/logos/rss.png" class="sourceLogo"/>RSS</h3>
+            <p>Enter an RSS Feed URL:</p>
+          </div>
+          <div class="span8">
+            <fieldset>
+              <input class="span8" type="text" name="rss" />
+              <span class="help-block">
+                Example: ""
+              </span>
+              <br/>
+              <input type="checkbox" name="rss_summary" />
+              <span>Include Summary</span>
+            </fieldset>
+          </div>
+        </div>
+        <!-- Coming Soon -->
+        <div class="row">
+          <div class="span3">&nbsp;</div>
+          <div class="span5">
+            <h5>Coming Soon:</h5>
+            <img src="img/logos/sms.png" class="sourceLogo" alt="sms"/>
+            <img src="img/logos/facebook.png" class="sourceLogo" alt="facebook"/>
+            <img src="img/logos/yelp.png" class="sourceLogo" alt="yelp"/>
+            <img src="img/logos/foursquare.png" class="sourceLogo" alt="foursquare"/>
+            <img src="img/logos/mail.png" class="sourceLogo" alt="mail"/>
           </div>
         </div>
       </section>
@@ -195,29 +220,40 @@
       $("#about, #contact").modal({"backdrop":true,"keyboard":true});
 
       $("form").submit(function(){
-        var queryStr = "",
-            sep = "";        
-        // split twitter input at spaces
-        var tWords = $("input[name=twitter]").val().split(" ");
+
+        // TWITTER
+        var tStr = "",
+            tWords = $("input[name=twitter]").val().split(" "),
+            tSep = "";        
+        // split input at spaces
         for(var i=0;i<tWords.length;i++){
           var text = tWords[i];
           if(text.charAt(0) === "@"){
             text = text.substr(1);
-            queryStr += sep + "from:"+text+" OR to:"+text;
+            tStr += tSep + "from:"+text+" OR to:"+text;
             // pick up the "mentions" checkbox
             if($("input[name=noMention]:checked").length === 0){
-              queryStr += " OR @"+text;
+              tStr += " OR @"+text;
             }
           } else {
-            queryStr += sep + text;
+            tStr += tSep + text;
           }
-          sep = " OR ";
+          tSep = " OR ";
         }
+        var twitter = encodeURIComponent(tStr);
+
+        // RSS
+        var rssUrl = $("input[name=rss]").val(),
+            rss = encodeURIComponent(rssUrl);
+        
         var size = $("input[name=size]:checked").val();
         // encodeURIComponent to escape hashes
         var title = encodeURIComponent($("input[name=title]").val()); 
-        var q = encodeURIComponent(queryStr);
-        url = "tweetboard.php?q="+q+"&size="+size+"&title="+title;
+        url = "statusboard.php?"
+            + "twitter=" + twitter
+            + "&rss=" + rss
+            + "&size=" + size
+            + "&title=" + title;
         window.location = url;
         return false;
       });

@@ -96,7 +96,7 @@ Examples:
 
     <!-- ============================================ -->
     <!-- CUSTOM JS FOR THIS BOARD                     -->
-    <script type="text/javascript" src="plugins/twitter/custom.js"></script>
+    <script type="text/javascript" src="plugins/rss/custom.js"></script>
     <script type="text/javascript">
 
       $("body").click(function(){
@@ -111,7 +111,7 @@ Examples:
       // CUSTOMIZATION OPTIONS
       sf.options = {
         // REQUIRED
-        "plugin":          "twitter",               // board type
+        "plugin":          "rss",                   // board type
         "container":       $("#board"),             // where to put the board
         "template":        $("#row_template"),      // row template
         "numRows":         <?php echo $numRows ?>,  // number of rows

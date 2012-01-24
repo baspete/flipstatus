@@ -1,16 +1,15 @@
 
-sf.plugins.twitter = {
+sf.plugins.rss = {
  	
-  dataType: 'jsonp',
+  dataType: 'json',
 
   // get tweets
   url: function(options){
-    var base_url = "http://search.twitter.com/search.json";
+    var base_url = "plugins/rss/parse.php";
     // pick up the query from the page URL
-    var searchString = sf.util.getUrlParam("twitter");
-    // optionally limit results
-    var maxResults = options.maxResults ? options.maxResults : options.numRows;
-    return base_url + "?q=" + searchString + "&rpp=" + maxResults;
+    var urlString = sf.util.getUrlParam("rss");
+    console.log("rss:",urlString)
+    return base_url + "?url=" + urlString;
   },
 
   formatData: function(response){
