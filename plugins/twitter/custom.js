@@ -1,6 +1,6 @@
 
 sf.plugins.twitter = {
- 	
+
   dataType: 'jsonp',
 
   // get tweets
@@ -17,7 +17,7 @@ sf.plugins.twitter = {
     var newResponse = [];
     for(var i=0;i<response.results.length;i++){
       // console.log("Tweet Data:",response.results[i]);
-      // 
+      //
 
       // Get the author
       var from_user = response.results[i].from_user;
@@ -30,7 +30,6 @@ sf.plugins.twitter = {
       if(age < 60){
         status = "0";
       }
-      console.log(age < 60)
 
       // set hours and minutes
       var hrs = created.getHours();
@@ -43,7 +42,7 @@ sf.plugins.twitter = {
       }
       timestamp = hrs.toString() + mins.toString();
 
-      // Split the tweet text into rows and add each row to newResponse[] 
+      // Split the tweet text into rows and add each row to newResponse[]
       // with a timestamp only on the first one
       var text = response.results[i].from_user+": "+response.results[i].text;
       var rows = sf.util.splitString(text, sf.options.numChars);

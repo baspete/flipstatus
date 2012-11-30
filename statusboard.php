@@ -2,23 +2,23 @@
 TWEETBOARD
 
 This page displays a list of tweets based on the "q" query parameter
-in the page url. The parameters should conform to the Twitter 
+in the page url. The parameters should conform to the Twitter
 Search API, as documented here:
 
 https://dev.twitter.com/docs/api/1/get/search
 
-The body class is based on the "size" query parameter in the url. If 
+The body class is based on the "size" query parameter in the url. If
 the "size" parameter is not supplied the page defaults to 1440x900
 
 Examples:
 
-- recent tweets by from or mentioning user "baspete" at 1080p:   
+- recent tweets by from or mentioning user "baspete" at 1080p:
   tweetboard.php?q=from:baspete&size=hd1080
 
-- tweets tweets mentioning "baspete" at 1280x1024:  
+- tweets tweets mentioning "baspete" at 1280x1024:
   tweetboard.php?q=@baspete&size=1280x1024
-  
-- tweets containing string "palmsprings":  
+
+- tweets containing string "palmsprings":
   tweetboard.php?q=palmsprings (defaults to 1440x900)
 
 -->
@@ -42,11 +42,11 @@ Examples:
     <link rel="stylesheet" href="css/split-flap.css"/>
   </head>
   <body class="<?php echo $size ?>">
-  
+
     <!-- ============================================ -->
     <!-- CONTAINER                                    -->
     <div id="board" class="chartContainer splitflap">
-      
+
       <h1><?php echo $title ?></h1>
 
       <!-- Header: 30px/char -->
@@ -96,6 +96,7 @@ Examples:
 
     <!-- ============================================ -->
     <!-- CUSTOM JS FOR THIS BOARD                     -->
+    <script type="text/javascript" src="plugins/twitter/custom.js"></script>
     <script type="text/javascript" src="plugins/rss/custom.js"></script>
     <script type="text/javascript">
 
@@ -106,12 +107,12 @@ Examples:
         if(ev.which === 13) { // 13 is ENTER
           window.history.back();
         }
-      }); 
+      });
 
       // CUSTOMIZATION OPTIONS
       sf.options = {
         // REQUIRED
-        "plugin":          "rss",                   // board type
+        "plugin":          "twitter",                   // board type
         "container":       $("#board"),             // where to put the board
         "template":        $("#row_template"),      // row template
         "numRows":         <?php echo $numRows ?>,  // number of rows
@@ -128,7 +129,7 @@ Examples:
         sf.items.init(sf.options);
         sf.items.load(sf.options);
       });
-      
+
     </script>
 
   </body>

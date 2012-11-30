@@ -16,7 +16,7 @@
   </head>
 
   <body>
- 
+
   <div class="topbar">
     <div class="fill">
       <div class="container">
@@ -24,7 +24,7 @@
           <img class="logo" src="img/logo.png" alt="flipstatus - a virtual Solari Board solution"/>
         </div>
       </div>
-    </div>    
+    </div>
     <div class="subhead">
       <div class="container">
         <div class="pull-right">
@@ -62,6 +62,7 @@
           </div>
         </div>
         <!-- rss -->
+        <!--
         <div class="row">
           <div class="span3">&nbsp;</div>
           <div class="span5">
@@ -80,6 +81,7 @@
             </fieldset>
           </div>
         </div>
+        -->
         <!-- Coming Soon -->
         <div class="row">
           <div class="span3">&nbsp;</div>
@@ -224,7 +226,7 @@
         // TWITTER
         var tStr = "",
             tWords = $("input[name=twitter]").val().split(" "),
-            tSep = "";        
+            tSep = "";
         // split input at spaces
         for(var i=0;i<tWords.length;i++){
           var text = tWords[i];
@@ -245,10 +247,10 @@
         // RSS
         var rssUrl = $("input[name=rss]").val(),
             rss = encodeURIComponent(rssUrl);
-        
+
         var size = $("input[name=size]:checked").val();
         // encodeURIComponent to escape hashes
-        var title = encodeURIComponent($("input[name=title]").val()); 
+        var title = encodeURIComponent($("input[name=title]").val());
         url = "statusboard.php?"
             + "twitter=" + twitter
             + "&rss=" + rss
@@ -257,7 +259,7 @@
         window.location = url;
         return false;
       });
-      
+
     });
 
 
