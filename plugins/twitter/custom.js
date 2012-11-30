@@ -1,4 +1,3 @@
-
 sf.plugins.twitter = {
  	
   dataType: 'jsonp',
@@ -30,7 +29,6 @@ sf.plugins.twitter = {
       if(age < 60){
         status = "0";
       }
-      console.log(age < 60)
 
       // set hours and minutes
       var hrs = created.getHours();
