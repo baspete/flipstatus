@@ -1,4 +1,3 @@
-
 sf.plugins.twitter = {
 
   dataType: 'jsonp',
