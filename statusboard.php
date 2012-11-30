@@ -111,7 +111,7 @@ Examples:
       // CUSTOMIZATION OPTIONS
       sf.options = {
         // REQUIRED
-        "plugin":          "rss",                   // board type
+        "plugin":          "twitter",               // board type
         "container":       $("#board"),             // where to put the board
         "template":        $("#row_template"),      // row template
         "numRows":         <?php echo $numRows ?>,  // number of rows
