@@ -62,6 +62,7 @@
           </div>
         </div>
         <!-- rss -->
+        <!--
         <div class="row">
           <div class="span3">&nbsp;</div>
           <div class="span5">
@@ -80,6 +81,7 @@
             </fieldset>
           </div>
         </div>
+        -->
         <!-- Coming Soon -->
         <div class="row">
           <div class="span3">&nbsp;</div>
