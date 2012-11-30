@@ -96,7 +96,7 @@ Examples:
 
     <!-- ============================================ -->
     <!-- CUSTOM JS FOR THIS BOARD                     -->
-    <script type="text/javascript" src="plugins/rss/custom.js"></script>
+    <script type="text/javascript" src="plugins/twitter/custom.js"></script>
     <script type="text/javascript">
 
       $("body").click(function(){
